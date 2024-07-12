@@ -1,0 +1,4 @@
+name: ReportBeacon
+version: '${version}'
+main: demonck.paper.reportBeacon
+api-version: '1.20'
