@@ -1,5 +1,5 @@
 name: ReportBeacon
-version: '${version}'
+version: '1.0-SNAPSHOT'
 main: demonck.paper.reportBeacon
 api-version: '1.20'
 

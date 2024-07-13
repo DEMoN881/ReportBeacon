@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
 group = 'demonck.paper'
@@ -20,7 +21,6 @@ repositories {
 dependencies {
     compileOnly "org.spigotmc:spigot-api:1.20.2-R0.1-SNAPSHOT"
     implementation 'org.telegram:telegrambots:6.9.7.1'
-
 }
 
 def targetJavaVersion = 17
@@ -49,3 +49,11 @@ processResources {
         expand props
     }
 }
+
+shadowJar {
+    archiveClassifier.set('')
+    archiveVersion.set('')
+    mergeServiceFiles()
+}
+
+build.dependsOn shadowJar
